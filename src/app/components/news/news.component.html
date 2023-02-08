@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let cards of arrayNews">
+      <div class="card h-100">
+        <h5 class="card-title">{{ cards.title }}</h5>
+        <img [src]="cards.img" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <p class="card-text">{{ cards.description }}</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated on {{ cards.date }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form">
+    <!-- Insert title-->
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="title"/>
+    </div>
+
+    <!-- Insert image-->
+    <div class="mb-3">
+      <label for="img" class="form-label">Image</label>
+      <input type="url" class="form-control" id="img" [(ngModel)]="img" />
+    </div>
+
+    <!-- Insert description-->
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        rows="3"
+        id="description"
+        [(ngModel)]="description"
+      ></textarea>
+    </div>
+
+    <!-- Insert date-->
+    <div class="mb-3">
+      <label for="date" class="form-label">Date</label>
+      <input type="text" class="form-control" id="date"  [(ngModel)]="date" />
+    </div>
+
+    <!-- Button-->
+    <button type="text" class="btn btn-primary" (click)="addNewPost()">
+      Add Post
+    </button>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from './interfaces/post.interface'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'actividad_5';
+
+
+  constructor(){
+  
+  }
+
+  currentNew = "Current New";
 }
