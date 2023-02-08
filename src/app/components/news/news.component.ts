@@ -42,14 +42,15 @@ export class NewsComponent {
       date: this.date,
     };
     //console.log(this.arrayNews)
-    if (this.title && this.img && this.description && this.date !== 'null') {
-      this.arrayNews.push(newPost);   
+    if (this.title && this.img && this.description && this.date !== '') {
+      this.arrayNews.push(newPost);
+      this.title = '';
+      this.img = '';
+      this.description = '';
+      this.date = '';
+
     } else {
       alert('Algún campo está vacío');
     }
-    this.title = '';
-    this.img = '';
-    this.description = '';
-    this.date = '';
   }
 }

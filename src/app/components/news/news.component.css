@@ -1,7 +1,9 @@
 .container{
     padding: 20px 20px;
     margin: 25px 25px;
-    max-width: 1400px;
+}
+.row{
+    justify-content: space-between;
 }
 
 .card{
